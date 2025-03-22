@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países</title>
+</head>
+<body>
+    <h1>Origem da pessoa</h1>
+    País de origem <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="origem()">
+    <div id="res">
+
+    </div>
+    <script>
+        function origem() {
+            var txtp = document.querySelector('input#txtpais')
+            var res = document.querySelector('div#res')
+            var pais = (txtp.value)
+            res.innerHTML = `Seu país de origem é <strong>${pais}</strong>`
+            if (pais == 'Brasil') {
+                res.innerHTML += `<p>Você é brasilero!!</p>`
+            } else {
+                res.innerHTML += `<p>Você é estrangeiro</p>`
+            }
+        }
+    </script>
+</body>
+</html>
