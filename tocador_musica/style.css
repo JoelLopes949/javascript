@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+body {
+    font-family: sans-serif;
+    background-image: linear-gradient(to bottom, #2E338C, #3299D9, #36ABD9, #403C01);
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
