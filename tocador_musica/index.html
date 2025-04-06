@@ -11,24 +11,26 @@
     <div class="music-container">
         <h1 id="playlist-title">Playlist de música</h1>
         <img id="cover" src="imagens/capa_fear_of_the_dark.jpg" alt="Album_Fear of the Dark">
+        <audio id="audio" src="songs/Fear of the Dark (2015 Remaster).mp3"></audio>
         <div id="below-cover">
             <div id="song-info">
-                <div id="song-name">Iron Maiden - Fear of the dark</div>
-                <div id="band-name" class="light-color">Iron Maiden</div>
+                <div id="song-name">Nome da música</div>
+                <div id="band-name" class="light-color">Nome da banda</div>
             </div>
-            <div id="like" class="button"><i class="bi bi-heart"></i></div>
+            <button id="like" class="button"><i class="bi bi-heart"></i></button>
         </div>
         <div id="progress-bar">
             <div id="current-time"></div>
         </div>
         <div id="progress-bar-container">
         <div id="controls-container">
-            <div id="shuffle" class="button"><i class="bi bi-shuffle"></i></div> <!-- Embaralhar -->
-            <div id="previous" class="button button-navigate"><i class="bi bi-chevron-double-left"></i></div>
-            <div id="play" class="button button-biggest"><i class="bi bi-play-circle-fill"></i></div>
-            <div id="next" class="button button-navigate"><i class="bi bi-chevron-double-right"></i></div>
-            <div id="repeat" class="button"><i class="bi bi-repeat"></i></div>
+            <button id="shuffle" class="button"><i class="bi bi-shuffle"></i></button> <!-- Embaralhar -->
+            <button id="previous" class="button button-navigate"><i class="bi bi-chevron-double-left"></i></button>
+            <button id="play" class="button button-biggest"><i class="bi bi-play-circle-fill"></i></button>
+            <button id="next" class="button button-navigate"><i class="bi bi-chevron-double-right"></i></button>
+            <button id="repeat" class="button"><i class="bi bi-repeat"></i></button>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -11,6 +11,12 @@ body {
     align-items: center;
 }
 
+button {
+    background-color: inherit;   
+    color: inherit;
+    border: none; 
+}
+
 #cover {
     width: 450px;
 
