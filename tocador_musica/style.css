@@ -1,5 +1,18 @@
 @charset "UTF-8";
 
+@media screen and (min-width: 300px) {
+    body {
+        font-size: 0.8em;
+    }
+    #cover {
+        width: 180px;
+    }
+    .button {
+        font-size: 0.5em;
+    }
+}
+
+
 body {
     font-family: sans-serif;
     background-image: linear-gradient(to bottom, #2E338C, #3299D9, #36ABD9, #403C01);
