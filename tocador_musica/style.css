@@ -1,17 +1,5 @@
 @charset "UTF-8";
 
-@media screen and (min-width: 0px) and (max-width: 300px) {
-    body {
-        font-size: 10px;
-    }
-    #cover {
-        width: 200px;
-    }
-    .button {
-        font-size: 1em;
-    }
-}
-
 body {
     font-family: sans-serif;
     background-image: linear-gradient(to bottom, #2E338C, #3299D9, #36ABD9, #403C01);
@@ -86,12 +74,16 @@ button {
     height: 3px;
     width: 100%;
     border-radius: 15px;
-    margin-bottom: 30px;
 }
 
-#current-time {
+#current-progress {
+    --progress: 0%;
     background-color: white;
     height: inherit;
-    width: 50%;
+    width: var(--progress);
     border-radius: inherit;
+}  
+
+#progress-container {
+    padding-bottom: 1em;
 }
