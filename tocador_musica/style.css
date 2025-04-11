@@ -1,21 +1,5 @@
 @charset "UTF-8";
 
-@media (max-width: 300px) {
-    #below-cover {
-        flex-direction: column; /* Reorganizar para evitar cortes */
-        align-items: center;
-    }
-
-    #controls-container {
-        flex-wrap: wrap;
-    }
-
-    button {
-        padding: 0.5em; /* Para melhor tocabilidade */
-    }
-}
-
-
 
 body {
     font-family: sans-serif;
