@@ -5,6 +5,7 @@ const cover = document.getElementById('cover');
 const play = document.getElementById('play');
 const next = document.getElementById('next');
 const previous = document.getElementById('previous');
+const likeButton = document.getElementById('like');
 const currentProgress = document.getElementById('current-progress');
 const progressContainer = document.getElementById('progress-container');
 const shuffleButtom = document.getElementById('shuffle');
@@ -17,16 +18,19 @@ const FearOfTheDark = {
     songName: 'Fear of the Dark (2015 Remaster)',
     artist: 'Iron Maiden',
     file: 'capa_fear_of_the_dark',
+    liked: false,
 };
 const HeartsOnFire = {
     songName: 'Hearts On Fire',
     artist: 'Hammerfall',
     file: 'hearts_on_fire',
+    liked: false,
 };
 const WheelsOfTheSteel = {
     songName: '747 (Strangers in the Night)',
     artist: 'Saxon',
     file: 'capa_wheels_of_steel',
+    liked: false,
 };
 let isPlaying = false;
 let isShuffled = false;
@@ -60,11 +64,24 @@ function playPauseDecider() {
     }
 }
 
+function likeButtonRender() {
+    if (sortedPlaylist[index].liked === true) {
+        likeButton.querySelector('.bi').classList.remove('bi-heart');
+        likeButton.querySelector('.bi').classList.add('bi-heart-fill');
+        likeButton.classList.add('button-active');
+    } else {
+        likeButton.querySelector('.bi').classList.add('bi-heart');
+        likeButton.querySelector('.bi').classList.remove('bi-heart-fill');
+        likeButton.classList.remove('button-active');
+    }
+}
+
 function initializeSong() {
     cover.src = `imagens/${sortedPlaylist[index].file}.jpg`;
     song.src = `songs/${sortedPlaylist[index].songName}.mp3`;
     songName.innerText = sortedPlaylist[index].songName;
-    artistName.innerText = sortedPlaylist[index].artist;   
+    artistName.innerText = sortedPlaylist[index].artist;
+    likeButtonRender();   
 }
 
 function previousSong() {
@@ -156,6 +173,28 @@ function updateTotalTime() {
     totalTime.innerText = toHHMMSS(song.duration);
 }
 
+// Modifique a função likeButtonCliked para salvar corretamente
+function likeButtonCliked() {
+    sortedPlaylist[index].liked = !sortedPlaylist[index].liked; // Alterna o estado de "liked"
+    likeButtonRender();
+    localStorage.setItem('playlist', JSON.stringify(originalPlaylist)); // Salva no localStorage
+}
+
+// Carregar o estado salvo do localStorage
+function loadPlaylistFromLocalStorage() {
+    const savedPlaylist = localStorage.getItem('playlist');
+    if (savedPlaylist) {
+        const parsedPlaylist = JSON.parse(savedPlaylist);
+        originalPlaylist.forEach((song, index) => {
+            song.liked = parsedPlaylist[index].liked; // Atualiza o estado de "liked"
+        });
+    }
+}
+
+// Chame a função de carregamento ao inicializar
+loadPlaylistFromLocalStorage();
+initializeSong();
+
 
 play.addEventListener('click', playPauseDecider);
 previous.addEventListener('click', previousSong);
@@ -166,7 +205,5 @@ song.addEventListener('loadedmetadata', updateTotalTime);
 progressContainer.addEventListener('click', jumpTo);
 shuffleButtom.addEventListener('click', shuffleButtomClicked);
 repeatButton.addEventListener('click', repeatButtonClicked);
-
-initializeSong();
-
+likeButton.addEventListener('click', likeButtonCliked)
 
