@@ -86,10 +86,17 @@ button {
 }  
 
 #progress-container {
-    padding-bottom: 1em;
     cursor: pointer;
 }
 
 .button-active {
     color: rgba(60, 163, 31, 0.805)
+}
+
+#time-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: smaller;
+    margin-top: 0.5em;    
 }
