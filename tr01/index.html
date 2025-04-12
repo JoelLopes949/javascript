@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Meu primeiro desafio com JS</h1>
+    <p>Esse é um texto de minha página desafio</p>
+</body>
+<script>
+    let listaCores = ['yellow', 'blue', 'red', 'green', 'pink']
+    document.body.style.backgroundColor = listaCores[3];
+
+    function trocarCores() {
+        document.body.style.backgroundColor = listaCores[Math.floor(5*Math.random())];
+    }
+
+    setInterval(trocarCores, 2000);
+</script>
+</html>
