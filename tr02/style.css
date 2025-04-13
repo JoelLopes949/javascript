@@ -1,0 +1,25 @@
+body {
+    height: 100dvh;
+    background-color: rgb(2, 2, 62);
+    color: white;
+}
+
+.manha {
+    background-color: rgba(0, 128, 255, 0.432);
+    color: black;
+}
+
+.tarde {
+    background-color: orange; 
+    color: black;
+}
+
+.noite {
+    background-color: rgb(2, 2, 62);
+    color: white;
+}
+
+.madrugada {
+    background-color: black;
+    color: white;
+}
