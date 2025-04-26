@@ -20,7 +20,7 @@
                  type="text"
                  required
             />
-            <input value="KWh" type="text" disabled>
+            <input value="kWh" type="text" disabled>
             <select name="periodo-consumo" id="periodo-consumo">
                 <option value="mes">/Mês</option>
                 <option value="ano">/Ano</option>
@@ -59,11 +59,15 @@
             </div>
             <button type="submit" id="botao-calcular" name="botao-calcular">Calcular</button>
         </form>
-
-        <div class="total">
-            <p>Seu gasto será de</p>
-            <p>-reais</p>
-        </div>
+        <section id="conteiner-resultados">
+            <article>
+                Seu gasto será de:
+                <p>
+                    <bold id="consumo">-</bold>
+                    reais
+                </p>
+            </article>
+        </section>
     </main>
     <script src="script.js"></script>
 </body>

@@ -1,6 +1,7 @@
 header {
     background-color: aquamarine;
     padding: 10px;
+    margin-bottom: 20px;
 }
 
 img {
@@ -14,11 +15,15 @@ img {
     margin: 20px 140px;
 }
 
-.total {
+article {
     padding: 20px;
-    margin: 90px 50px 50px 200px;
-    height: 200px;
-    width: 100px;
+    margin: 50px 50px 50px 200px;
+    height: 150px;
+    width: 150px;
     border: 1px solid black;
     border-radius: 20px;
+}
+
+input {
+    text-align: center;
 }
