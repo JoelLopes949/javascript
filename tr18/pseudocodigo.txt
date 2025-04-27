@@ -1,0 +1,19 @@
+nomeAluno = 'Joel Lopes'
+notasLancadas = 0
+pontosSomados = 0
+media = 0
+
+//estrutura de repetição
+enquanto (notasLancadas < 12)
+    nota = insira a nova nota do Daniel
+    pontosSomados = pontosSomados + nota
+    notasLancadas = notasLancadas + 1
+    media = pontosSomados / notasLancadas
+//encerro as repetições
+
+
+//código condicional
+se (meda >= 6)
+    entao escreva('Aluno Aprovado')
+caso contrario
+    entao escreva('Aluno Reprovado')
