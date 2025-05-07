@@ -23,10 +23,8 @@ app.put('/:sigla', (req, res) => {
     const siglaInformada = req.params.sigla.toUpperCase();
     tabela2024.find((t) => t.sigla === siglaInformada); // Find operation retained if needed for side effects
     const campos = Object.keys(req.body)
-    for (let campo of campos) {
-      timeSelecionado[campo] =  req.body[campo]
-    }
-    res.status(200).send(timeSelecionado);
+    console.log(campos);
+    res.send(req.body);
 })
 
 app.listen(300, () => console.log('servidor rodando com sucesso'));
