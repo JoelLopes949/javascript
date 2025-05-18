@@ -12,7 +12,7 @@ function Form() {
                     <input type="text" placeholder="Digite seu nome" />
                 </div>
                 <div>
-                    <input type="submit" value="Cadastrar" />
+                        <input type="submit" value="Cadastrar" />
                 </div>
             </form>
         </div>
