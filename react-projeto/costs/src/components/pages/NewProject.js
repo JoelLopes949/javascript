@@ -15,7 +15,7 @@ function NewProject() {
         project.services = [];
 
         fetch("http://localhost:5000/projects", {
-            method: "POST",
+            method: "GET",
             headers: {
                 "Content-Type": "application/json",
             },
@@ -35,7 +35,7 @@ function NewProject() {
     return (
         <div className={styles.newproject_container}>
             <h1>Criar Projeto</h1>
-            <p>Crie seu projeto para depois adicionar os serviços.</p>
+            <p>Crie seu projeto para depois adicionar os serviç os.</p>
             <ProjectForm handleSubmit={createPost} btnText="Criar Projeto" />
         </div>
     )
