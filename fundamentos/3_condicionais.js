@@ -55,3 +55,81 @@ if (velocidade < 20) {
 // else: 1 apenas, precisa de if e não do else if
 
 // switch
+//ele é bom para analizar casos com valores fixos. EX: dia da semana
+
+// if, geralmente com intervalos de valores
+//switch, geralmente com valores específicos
+
+// if vai dominar os programas na maioria das vezes
+
+let diaDiaSemana = 6;
+
+switch (diaDiaSemana) {
+    case 1: 
+        console.log("Segunda-feira");
+        break; // interrompe o switch, não executa os outros casos
+    case 2:
+        console.log("Terça-feira");
+        break;
+    case 3:
+        console.log("Quarta-feira");
+        break;
+    case 4:
+        console.log("Quinta-feira");
+        break;
+    case 5:
+        console.log("Sexta-feira");
+        break;
+    case 6:
+        console.log("Sábado");
+        break;
+    case 7:
+        console.log("Domingo");
+        break;
+    default: // caso não seja nenhum dos anteriores
+        console.log("Dia inválido");
+        break; // não é obrigatório, mas é uma boa prática
+}
+
+// Operadores lógicos
+// AND &&
+// OR ||
+// NOT !
+
+// Tabela verdade
+
+//Vão permitir lógicas mais complexas
+
+// EXP1 && EXP2 -> true se as duas forem verdadeiras
+// EXP1 || EXP2 -> true se pelo menos uma for verdadeira
+// !EXP1 -> inverte o resultado boolean = true vira false e vice-versa
+
+// Vamos verificar se o usuário pode dirigir
+let idadeUsuario = 19;
+let TemCarteira = true;
+
+// As expressões sempre viram boleanos > true >> true = true, false >> true = false
+if (idadeUsuario >= 18 && TemCarteira) {
+    console.log('Você pode dirigir!');
+} else {
+    console.log('Você não pode dirigir!');
+}
+
+// cadastro em um sistema
+// ele pode fazer com rg ou passaporte
+const temRG = true;
+const temPassaporte = false;
+
+if (temRG || temPassaporte) {
+    console.log('Você pode se cadastrar!');
+} else {
+    console.log('Você não pode se cadastrar!'); 
+}
+
+// ! -> inverte o resultado
+const estaChovendo = true;
+
+// !true > false
+if (!estaChovendo) {
+console.log("Não está chovendo");
+}
