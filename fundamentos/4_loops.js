@@ -20,6 +20,21 @@ for(let i = 0; i <= 4; i++) {
 
 const frutas = ["maçã", "banana", "laranja"];
 
-console.log(frutas)
+console.log(frutas);
 
+// ele é zero based
+console.log(frutas[0]);
+console.log(frutas[2]);
+
+// i -> 0, i -> 1, i -> 2
+for(let i = 0; i < 4; i++) {
+    console.log("Fruta: " + frutas[i])
+}
+
+//lista.length => quantidade de elementos
+for(let i = 0; i < frutas.length; i++) {
+    console.log("Fruta: " + frutas[i])
+}
+
+//while
 
