@@ -10,8 +10,16 @@
 // Incrementador = i++ (cada loop, soma um)
 
 // loop que itera de 0 até
-for(let i = 0; i = 4; i++) {
-    console.log("Loop for - o i é:" + i)
-    
+for(let i = 0; i <= 4; i++) {
+    console.log("Loop for - o i é: " + i)    
 }
+
+// arrays = listas
+// contém geralmente itens do mesmo tipo de dado
+// lista de strings, de números...
+
+const frutas = ["maçã", "banana", "laranja"];
+
+console.log(frutas)
+
 
