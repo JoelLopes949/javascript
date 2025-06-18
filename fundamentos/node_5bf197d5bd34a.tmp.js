@@ -12,6 +12,5 @@
 // loop que itera de 0 até
 for(let i = 0; i = 4; i++) {
     console.log("Loop for - o i é:" + i)
-    
 }
 
