@@ -36,5 +36,41 @@ for(let i = 0; i < frutas.length; i++) {
     console.log("Fruta: " + frutas[i])
 }
 
-//while
+// while
+// a gente não sabe da condição final
+let p = 0
 
+while(p < 5) {
+    console.log("Loop while: " + p)
+
+    p++
+}
+
+let aleatorio = -1;
+
+// console.log(Math.floor(Math.random() * 10) + 1);
+
+while(aleatorio != 10) {
+    aleatorio = Math.floor(Math.random() * 10) + 1;
+
+    console.log("Num. aleatório " + aleatorio);
+}
+
+// while é bom quando não sei quando vai acabar
+
+// do while
+// while que garante 1 execução
+// Super incomum, chance de ver em um programa beira o zero
+do {
+    console.log("Teste")
+} while(1 > 2);
+
+
+var j = 0
+do {
+    console.log("J: " + j)
+    j++
+} while(j < 10)
+//No que focar? Aprender bem o for
+
+// Exercícios com Condicionais e Loops
