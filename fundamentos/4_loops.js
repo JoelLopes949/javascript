@@ -96,8 +96,24 @@ const palavra = "JavaScript"
 let consoantes = 0;
 // textos são parecidos com arrays
 // cada letra é um elemento
-console.log(palavra[0
+console.log(palavra[0])
+console.log(palavra.length)
 
-for() {
+// JS é case sensitive
+// A == a > false, a == a > true
+console.log(palavra[0].toLocaleLowerCase() == "j")
 
+
+// case sensitive
+for(let i = 0; i < palavra.length; i++) {
+    let letra = palavra[i].toLocaleLowerCase();
+
+    if (letra !== "a" && letra !== "e" && letra !== "i" && letra !== "o" && letra !== "u") {
+        consoantes++;
+    }
 }
+
+console.log("Contagem de consoantes: " + consoantes + " da palavra " + palavra);
+
+// Interpolação de strings
+console.log(`Contagem de consoantes: ${consoantes} da palavra ${palavra}`)
