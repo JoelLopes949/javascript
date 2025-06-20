@@ -73,4 +73,31 @@ do {
 } while(j < 10)
 //No que focar? Aprender bem o for
 
+
 // Exercícios com Condicionais e Loops
+// Soma de números pares de 0 a 20
+let soma = 0;
+let anterior = 0;
+
+for(let i = 0; i <= 20; i++) {
+    // verificar números pares
+    if(i % 2 == 0) {
+        let resultado = soma + i;
+        console.log(`${soma} + ${i} = ${resultado}`);
+        soma = resultado;
+    }
+}
+
+console.log("Soma final:", soma);
+
+
+// Contar quantas consoantes tem na palavra
+const palavra = "JavaScript"
+let consoantes = 0;
+// textos são parecidos com arrays
+// cada letra é um elemento
+console.log(palavra[0
+
+for() {
+
+}
