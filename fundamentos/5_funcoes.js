@@ -107,7 +107,6 @@ console.log(detectarTipo(2))
 
 
 // Condicional ternária 
-
 // condição/expressão ? TRUE : FALSE
 
 const idade = 14;
