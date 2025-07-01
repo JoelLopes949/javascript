@@ -138,3 +138,13 @@ button:hover {
 .good {
     color: #12db34;
 }
+
+.low {
+    color: #dbce12;
+}
+.medium {
+    color: #db6212;
+}
+.high {
+    color: #db1912;
+}
