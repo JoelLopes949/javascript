@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/header.css">
     <title>Landing page</title>
 </head>
 <body>
@@ -12,6 +14,28 @@
             <i class="fa-solid fa-burger" id="nav_logo">food</i>
 
             <ul id="nav_list">
+                <li class="nav-item active">
+                    <a href="#home">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials">Avaliações</a>
+                </li>
+            </ul>
+
+            <button class="btn-default">
+                Peça aqui
+            </button>
+
+            <button id="mobile_btn"> 
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
                 <li class="nav-item">
                     <a href="#home">Inicio</a>
                 </li>
@@ -22,7 +46,11 @@
                     <a href="#testimonials">Avaliações</a>
                 </li>
             </ul>
-        </nav>
+
+            <button class="btn-default">
+                Peça aqui
+            </button>
+        </div>
     </header>
 </body>
 </html>
