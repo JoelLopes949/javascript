@@ -5,6 +5,15 @@
 @import url('testimonials.css');
 @import url('footer.css');
 
+:root {
+    --primary-color: #fff9ea;
+    --secondary-color: #ffe8b4;
+    --thirdary-color: #f8d477;
+    --fordary-color: #ffe100;
+    --fivethary-color: #ffcb45;
+    --sixdary-color: #e9a209;
+}
+
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
