@@ -22,7 +22,7 @@
 }
 
 body {
-    background-color: #fff9ea;
+    background-color: var(--primary-color);
 }
 
 section {
@@ -34,7 +34,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ffcb45;
+    background-color: var(--fivethary-color);
     border-radius: 12px;
     padding: 10px 14px;
     font-weight: 600;
@@ -44,7 +44,7 @@ section {
 }
 
 .btn-default:hover {
-    background-color: #f8d477;
+    background-color: var(--thirdary-color);
 }
 
 .social-media-buttons {
@@ -72,7 +72,7 @@ section {
 }
 
 .section-title {
-    color: #e9a209;
+    color: var(--sixdary-color);
     font-size: 1.563rem;
 }
 

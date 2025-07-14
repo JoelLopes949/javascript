@@ -50,7 +50,7 @@
 }
 
 .feedback-content p span {
-    color: #e9a209;
+    color: var(--sixdary-color);
 }
 
 @media screen and (max-width: 1170px) {

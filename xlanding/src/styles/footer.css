@@ -1,5 +1,5 @@
 footer {
-    background-color: #ffe8b4;
+    background-color: var(--secondary-color);
 }
 
 #footer_items {

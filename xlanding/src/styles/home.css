@@ -18,7 +18,7 @@
 }
 
 #cta .title span {
-    color: #e9a209;
+    color: var(--sixdary-color);
 }
 
 #cta .description {

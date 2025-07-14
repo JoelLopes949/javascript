@@ -30,7 +30,7 @@
 
 .dish-heart {
     position: absolute;
-    background-color: #e9a209;
+    background-color: var(--sixdary-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,7 +49,7 @@
 }
 
 .dish-rate i {
-    color: #e9a209;
+    color: var(--sixdary-color);
 }
 
 .dish-price {
