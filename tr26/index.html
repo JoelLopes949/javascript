@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Adicione sua tarefa</p>
+    <input id="entrada" type="text" value="teste">
+    <button onclick="salvarDados()">Salvar</button>
+
+    <br>
+    <p>Tarefa a fazer:</p>
+    <div id="resultados"></div>
+
+    <script>
+        let ListaDeTarefas = [];
+      
+        function salvarDados() {
+            let entrada = document.getElementById("entrada").value;
+            ListaDeTarefas.push(entrada);
+            mostrar();
+            console.log(ListaDeTarefas);
+            // crud
+        }
+
+        function mostrar() {
+            ListaDeTarefas.forEach(elemento => {
+                console.log(elemento);
+            } );
+        };
+
+    </script>
+</body>
+</html>
