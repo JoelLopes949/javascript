@@ -12,23 +12,67 @@
 
     <br>
     <p>Tarefa a fazer:</p>
-    <div id="resultados"></div>
-
+    <div id="editar"></div>
+    
+    <div>
+        <ul id="resultados"></ul>
+    </div>
     <script>
         let ListaDeTarefas = [];
+        let index = 0;
       
         function salvarDados() {
             let entrada = document.getElementById("entrada").value;
-            ListaDeTarefas.push(entrada);
-            mostrar();
+            let entradaObj = {
+                id: index,
+                texto: entrada
+            };
+            index++;
+            ListaDeTarefas.push(entradaObj);
             console.log(ListaDeTarefas);
+
             // crud
-        }
+            mostrar();
+        };
 
         function mostrar() {
+            let ul = document.getElementById("resultados");
+            let html = "";
             ListaDeTarefas.forEach(elemento => {
-                console.log(elemento);
-            } );
+                html += `<li>
+                    ${elemento.texto} 
+                    <button onclick="editar(${elemento.id})">
+                        Editar
+                    </button>
+                    <button onclick="deletar(${elemento.id})">
+                        Deletar
+                    </button>
+                </li>`;
+            });
+            ul.innerHTML = html; 
+        };
+        
+        function editar (id) {
+                let resultado = ListaDeTarefas.find(obj => obj.id === id);
+                let html = `<input type="text" id="textoParaEditar" value="${resultado.texto}">
+                <button onclick="editarDados(${id})">Editar</button>`;
+                let divEditar = document.getElementById("editar");
+                divEditar.innerHTML = html;
+            console.log(resultado);
+        };
+        function editarDados(id) {
+            let textoParaEditar = document.getElementById("textoParaEditar").value;
+            let resultado = ListaDeTarefas.find(obj => obj.id === id );
+            resultado.texto = textoParaEditar;
+            mostrar();
+            let divEditar = document.getElementById("editar");
+            divEditar.innerHTML = "";
+        };
+
+        function deletar(id) {
+            let novaLista = ListaDeTarefas.filter(obj => obj.id !== id);
+            ListaDeTarefas = novaLista;
+            mostrar();
         };
 
     </script>
