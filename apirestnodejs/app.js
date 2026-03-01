@@ -1,9 +1,26 @@
-var express = require('express');
-var mysql = require('mysql');
+import express from 'express';
+import mysql from 'mysql';
 
-var app = express();
+const app = express();
 
-app.get('/', function(req, res) {
+// establecemos los parámetros de conexión
+const conexion = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'articulosdb' 
+});
+
+// probamos la conexión
+conexion.connect(function(error) {
+    if (error) {
+        throw error;
+        } else {
+        console.log('¡Conexión exitosa a la base de datos!');
+    }
+});
+
+app.get('/', function(res) {
     res.send('Ruta INICIO');
 });
 
