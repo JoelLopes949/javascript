@@ -1,32 +1,32 @@
 import express from 'express';
-import mysql from 'mysql';
+import mysql from 'mysql2';
 
-const app = express();
+var app = express();
 
 // establecemos los parámetros de conexión
 const conexion = mysql.createConnection({
     host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'articulosdb' 
+    user: 'root',          // o el usuario que creaste
+    password: '',          // pon la contraseña si la configuraste
+    database: 'articulosdb'
 });
 
 // probamos la conexión
-conexion.connect(function(error) {
+conexion.connect(error => {
     if (error) {
-        throw error;
-        } else {
-        console.log('¡Conexión exitosa a la base de datos!');
+        console.error('Error de conexión:', error);
+    } else {
+        console.log('Conexión correcta a la base de datos');
     }
 });
 
-app.get('/', function(res) {
+// ruta de prueba
+app.get('/', (req, res) => {
     res.send('Ruta INICIO');
 });
 
 const puerto = process.env.PUERTO || 3000;
 
-
-app.listen(puerto, function() {
-    console.log(`Servidor Ok en puerto: ${puerto}`);
+app.listen(puerto, () => {
+    console.log('Servidor OK en puerto ' + puerto);
 });
