@@ -4,7 +4,7 @@ import mysql from 'mysql2';
 var app = express();
 
 // establecemos los parámetros de conexión
-const conexion = mysql.createConnection({
+var conexion = mysql.createConnection({
     host: 'localhost',
     user: 'root',          // o el usuario que creaste
     password: '',          // pon la contraseña si la configuraste
@@ -14,7 +14,7 @@ const conexion = mysql.createConnection({
 // probamos la conexión
 conexion.connect(error => {
     if (error) {
-        console.error('Error de conexión:', error);
+        throw error;
     } else {
         console.log('Conexión correcta a la base de datos');
     }
