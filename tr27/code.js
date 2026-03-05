@@ -1,39 +1,43 @@
 // Definición de variables
-const url = 'http://localhost:3000/articulos';
+const url = 'http://localhost:3000/api/article';
 const contenedor = document.querySelector('tbody');
 let resultados = '';
 
 const modalArticulo = new bootstrap.Modal(document.getElementById('modalArticulo'));
 const formArticulo = document.querySelector('form');
-const desripcion = document.getElementById('descripcion');
+const descripcion = document.getElementById('descripcion');
 const precio = document.getElementById('precio');
 const stock = document.getElementById('stock');
 let opcion = '';
 
 btnCrear.addEventListener('click', () => {
     desripcion.value = ''
-    precio.value = ''
+    precio.value = ''   
     stock.value = ''
     modalArticulo.show()
     opcion = 'crear'
 })
 
-// Función para mostrar los resultados
-const mostrar = (articulos) => {
-    articulos.forEach( articulo => {
+const mostrar = (articules) => {
+    resultados = ''; // reinicia cada vez
+    articules.forEach(article => {
         resultados += `
-                <tr>
-                    <td>${articulo.id}</td>
-                    <td>${articulo.descripcion}</td>
-                    <td>${articulo.precio}</td>
-                    <td>${articulo.stock}</td>
-                    <td class="text-center"><a class="btnEditar btn btn-primary">Editar</a><a class="btnBorrar btn btn-danger">Borrar</a></td>
-                </tr>
-            `
+            <tr>
+                <td>${article.id}</td>
+                <td>${article.descripcion}</td>
+                <td>${article.precio}</td>
+                <td>${article.stock}</td>
+                <td class="text-center">
+                    <a class="btnEditar btn btn-primary">Editar</a>
+                    <a class="btnBorrar btn btn-danger">Borrar</a>
+                </td>
+            </tr>
+        `;
     });
-    contenedor.innerHTML = resultados
-
+    contenedor.innerHTML = resultados;
 }
+
+
 
 // Procedimiento / Mostrar
 fetch(url)
