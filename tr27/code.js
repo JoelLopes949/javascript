@@ -1,11 +1,11 @@
 // Definición de variables
-const url = 'http://localhost:3000/articulos';
+const url = 'http://localhost:4000/api/articulos';
 const contenedor = document.querySelector('tbody');
 let resultados = '';
 
 const modalArticulo = new bootstrap.Modal(document.getElementById('modalArticulo'));
 const formArticulo = document.querySelector('form');
-const desripcion = document.getElementById('descripcion');
+const descripcion = document.getElementById('descripcion');
 const precio = document.getElementById('precio');
 const stock = document.getElementById('stock');
 let opcion = '';
@@ -40,3 +40,28 @@ fetch(url)
     .then( response => response.json() )
     .then( data => mostrar(data) )
     .catch( error => console.log(error) )
+
+const on = (element, event, selector, handler) => {
+    // console.log(element)
+    // console.log(event)
+    // console.log(selector)
+    console.log(handler)
+    element.addEventListener(event, e => {
+        if (e.target.closest(selector)) {
+            handler(e)
+        } 
+    })
+}
+
+on(document, 'click', '.btnBorrar', e => {
+    const fila = e.target.parentNode.parentNode
+    const id = fila.firstElementChild.innerHTML
+    
+alertify.confirm("This is a confirm dialog.",
+  function(){
+    alertify.success('Ok');
+  },
+  function(){
+    alertify.error('Cancel');
+  })
+})
